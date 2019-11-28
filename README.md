@@ -1,1 +1,1 @@
-this directory is simply a mess of bits and pieces that I completed while working on mini-projects both inspired by and taken directly from the freecodecamp cirriculum. This is in an attempt to accelerate my learning, and replace my hesitancy for unabashed proliferation.
+This directory is simply a mess of bits and pieces that I completed while working on mini-projects both inspired by and taken directly from the freecodecamp cirriculum. I made this directory in an attempt to accelerate my learning by being more prolific with my code.
