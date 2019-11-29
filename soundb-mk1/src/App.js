@@ -1,29 +1,8 @@
 import React from 'react';  
 import './App.css';
-import soundfile from './500/media.io_bringmeachild.mp3'
-import Sound from 'react-sound'
+import soundfile from './freerealestate.mp3';
+import Sound from 'react-sound';
 import KeyboardEventHandler from 'react-keyboard-event-handler';
-
-/*class Alert extends React.Component {
-render() {
- return (
-   <Sound
-   url={soundfile}
-   playStatus={Sound.status.PLAYING}
-   onLoading={this.handleSongLoading}
-   onPlaying={this.handleSongPlaying}
-   onFinishedPlaying={this.handleSongFinishedPlaying}
-   />
-  );
- }
-}*/
-/*
-function ComponentA(props) {
-  return (<div>
-  <KeyboardEventHandler
-    handleKeys={["w"]}
-    onKeyEvent={((key, e) => props.handleClick())} />
-</div>)};*/
 
 class App extends React.Component {
   constructor(props) {
@@ -67,7 +46,7 @@ render() {
         onFinishedPlaying={this.handleSongFinishedPlaying}
         />
       }   
-      <button onClick={this.handleClick}>FEED ME</button> 
+      <button onClick={this.handleClick}>OH</button> 
     </KeyboardEventHandler>
     </div>
   );
