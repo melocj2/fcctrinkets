@@ -1,0 +1,353 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  background-color: white;
+}
+
+#base {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 50px;
+  background-color: rgb(14, 15, 15);
+  border-radius: 10px;
+  z-index: 1;
+}
+
+#base::before {
+  content: "";
+  position: absolute;
+  bottom: 33px;
+  left: 0px;;
+  width: 25px;
+  height: 100px;
+  border-radius: 10px;
+  background-color: rgb(14, 15, 15);
+  z-index: 1;
+}
+
+#base::after {
+  content: "";
+  position: absolute;
+  bottom: 33px;
+  left: 175px;
+  width: 25px;
+  height: 100px;
+  border-radius: 10px;
+  background-color: rgb(14, 15, 15);
+  z-index: 1;
+}
+
+
+
+#keyboard {
+  position: absolute;
+  bottom: 67%;
+  left: 12%;
+  width: 152px;
+  height: 100px;
+  border-radius: 10px;
+  background-color: white;
+  z-index: 2;
+}
+
+.key1 {
+  position: absolute;
+  top: 10%;
+  left: 7%;
+  width: 15px;
+  height: 15px;
+  background-color: rgb(14, 15, 15);
+  border-radius: 50%;
+}
+
+.key2 {
+  position: absolute;
+  top: 10%;
+  left: 22%;
+  width: 15px;
+  height: 15px;
+  background-color: rgb(14, 15, 15);
+  border-radius: 50%;
+}
+
+.key3 {
+  position: absolute;
+  top: 10%;
+  left: 36%;
+  width: 15px;
+  height: 15px;
+  background-color: rgb(14, 15, 15);
+  border-radius: 50%;
+}
+
+.key4 {
+  position: absolute;
+  top: 10%;
+  left: 51%;
+  width: 15px;
+  height: 15px;
+  background-color: rgb(14, 15, 15);
+  border-radius: 50%;
+}
+
+.key5 {
+  position: absolute;
+  top: 10%;
+  left: 66%;
+  width: 15px;
+  height: 15px;
+  background-color: rgb(14, 15, 15);
+  border-radius: 50%;
+}
+
+.key6 {
+  position: absolute;
+  top: 10%;
+  left: 81%;
+  width: 15px;
+  height: 15px;
+  background-color: rgb(14, 15, 15);
+  border-radius: 50%;
+}
+
+.key7 {
+  position: absolute;
+  top: 35%;
+  left: 7%;
+  width: 15px;
+  height: 15px;
+  background-color: rgb(14, 15, 15);
+  border-radius: 50%;
+}
+
+.key8 {
+  position: absolute;
+  top: 35%;
+  left: 22%;
+  width: 15px;
+  height: 15px;
+  background-color: rgb(14, 15, 15);
+  border-radius: 50%;
+}
+
+.key9 {
+  position: absolute;
+  top: 35%;
+  left: 36%;
+  width: 15px;
+  height: 15px;
+  background-color: rgb(14, 15, 15);
+  border-radius: 50%;
+}
+
+.key10 {
+  position: absolute;
+  top: 35%;
+  left: 51%;
+  width: 15px;
+  height: 15px;
+  background-color: rgb(14, 15, 15);
+  border-radius: 50%;
+}
+
+.key11 {
+  position: absolute;
+  top: 35%;
+  left: 66%;
+  width: 15px;
+  height: 15px;
+  background-color: rgb(14, 15, 15);
+  border-radius: 50%;
+}
+
+.key12 {
+  position: absolute;
+  top: 35%;
+  left: 81%;
+  width: 15px;
+  height: 15px;
+  background-color: rgb(14, 15, 15);
+  border-radius: 50%;
+}
+
+.key13 {
+  position: absolute;
+  top: 60%;
+  left: 7%;
+  width: 15px;
+  height: 15px;
+  background-color: rgb(14, 15, 15);
+  border-radius: 50%;
+}
+
+.key14 {
+  position: absolute;
+  top: 60%;
+  left: 22%;
+  width: 15px;
+  height: 15px;
+  background-color: rgb(14, 15, 15);
+  border-radius: 50%;
+}
+
+.key15 {
+  position: absolute;
+  top: 60%;
+  left: 36%;
+  width: 15px;
+  height: 15px;
+  background-color: rgb(14, 15, 15);
+  border-radius: 50%;
+}
+
+.key16 {
+  position: absolute;
+  top: 60%;
+  left: 51%;
+  width: 15px;
+  height: 15px;
+  background-color: rgb(14, 15, 15);
+  border-radius: 50%;
+}
+
+.key17 {
+  position: absolute;
+  top: 60%;
+  left: 66%;
+  width: 15px;
+  height: 15px;
+  background-color: rgb(14, 15, 15);
+  border-radius: 50%;
+}
+
+.key18 {
+  position: absolute;
+  top: 60%;
+  left: 81%;
+  width: 15px;
+  height: 15px;
+  background-color: rgb(14, 15, 15);
+  border-radius: 50%;
+}
+
+#spacebar {
+  position: absolute;
+  top: 82%;
+  left: 23%;
+  width: 80px;
+  height: 10px;
+  background-color: rgb(14, 15, 15);
+  border-radius: 5px;
+}
+
+#topbar {
+  position: absolute;
+  bottom: 290%;
+  right: -5%;
+  width: 220px;
+  height: 30px;
+  background-color: rgb(14, 15, 15);
+  border-radius: 5px;
+}
+
+#page {
+  position: absolute;
+  bottom: 10%;
+  left: 13%;
+  height: 120px;
+  width: 152px;
+  background-color: white;
+  border: 3px solid rgb(14, 15, 15);
+}
+
+#line1 {
+  position: absolute;
+  left: 5%;
+  top: 10%;
+  height: 5px;
+  width: 100px;
+  border-radius: 1px;
+  background-color: rgb(14, 15, 15);
+}
+
+#line2 {
+  position: absolute;
+  left: 5%;
+  top: 20%;
+  height: 5px;
+  width: 130px;
+  border-radius: 1px;
+  background-color: rgb(14, 15, 15);
+}
+
+#line3 {
+  position: absolute;
+  left: 5%;
+  top: 30%;
+  height: 5px;
+  width: 130px;
+  border-radius: 1px;
+  background-color: rgb(14, 15, 15);
+}
+
+#line4 {
+  position: absolute;
+  left: 5%;
+  top: 40%;
+  height: 5px;
+  width: 130px;
+  border-radius: 1px;
+  background-color: rgb(14, 15, 15);
+}
+
+#line5 {
+  position: absolute;
+  left: 5%;
+  top: 50%;
+  height: 5px;
+  width: 80px;
+  border-radius: 1px;
+  background-color: rgb(14, 15, 15);
+}
+
+#line6 {
+  position: absolute;
+  left: 5%;
+  top: 60%;
+  height: 5px;
+  width: 130px;
+  border-radius: 1px;
+  background-color: rgb(14, 15, 15);
+}
+
+#line7 {
+  position: absolute;
+  left: 5%;
+  top: 70%;
+  height: 5px;
+  width: 130px;
+  border-radius: 1px;
+  background-color: rgb(14, 15, 15);
+}
+
+#line8 {
+  position: absolute;
+  bottom: -5%;
+  right: -24%;
+  width: 220px;
+  height: 30px;
+  background-color: rgb(14, 15, 15);
+  border-radius: 5px;
+}
+
+#company {
+  position: absolute;
+  left: 140%;
+  bottom: -140%;
+  font-size: 9rem;
+  width: 10000px;
+  color: rgb(14, 15, 15);
+}
