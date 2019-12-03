@@ -1,0 +1,131 @@
+body {
+  background-color: black;
+  height: 100%;
+}
+
+.App {
+  text-align: center;
+  font-family: 'Share Tech Mono', monospace;
+  background-color: black;
+}
+
+
+#grid { 
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1vw;
+  width: 400px;
+  padding: 18px;
+  border-radius: 5px;
+  background-color: black;
+  }
+
+  #grid button {
+    border: 1px solid grey;
+    height:100px;
+    width:100px;
+    margin: auto;
+    border-radius: 5px;    
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 40px;
+    outline: none;
+    background-image:
+    radial-gradient(
+      circle closest-side,
+      rgb(206, 206, 206),
+      #ededed
+    );
+  }
+
+  #display {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+    width: 216px;
+    border-radius: 5px;
+    background-color: black;
+    position: relative;
+  }
+
+  #display::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 23px;
+    height: 325px;
+    width: 50%;
+    border-left: 1px solid grey;
+  }
+
+  #drum-machine {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 2fr 1fr;
+    width: 650px;
+    margin: auto;
+    margin-top: 70px;
+    border-radius: 5%;
+    border: 25px solid transparent;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(255,165,0,1) 0%, rgba(255,101,0,1) 0%, rgba(255,255,0,1) 33%, rgba(255,0,255,1) 97%) no-repeat fixed center;
+    position: relative;
+  }
+
+  #inputstuff {
+    height: 25px;
+    width: auto;
+    padding: 5px;
+    margin: auto;
+    font-family: 'Share Tech Mono', monospace;
+    background: #ededed;
+    border-radius: 5px;
+  }
+
+  #slider1 {
+    height: 20px;
+    width: auto;
+    margin: auto;
+    color: #ededed;
+  }
+
+  .switch input {
+    outline: none;
+  }
+
+  .switch input[type="checkbox"]:checked::before {
+    left: 10px;
+    background-color: #ededed;
+  }
+  
+  .switch input[type="checkbox"]:not(:checked)::before {
+    right: 10px;
+    background-color: #ededed;
+  }
+  
+  .switch input[type="checkbox"]::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -0.25rem;
+    width: 0.5rem;
+    height: 1rem;
+    
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+  }
+  
+  .switch input[type="checkbox"]::after {
+    content: '';
+    display: block;
+    width: 1rem;
+    height: 0.5rem;
+    background-color: #ededed;
+  }
+  
+  .switch input[type="checkbox"] {
+    -webkit-appearance: none;
+    position: relative;
+    margin: 0 1rem;
+  }
+  
