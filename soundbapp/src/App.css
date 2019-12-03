@@ -18,7 +18,7 @@ body {
   width: 400px;
   padding: 18px;
   border-radius: 5px;
-  background-color: black;
+  background-color: rgb(26, 26, 26);
   }
 
   #grid button {
@@ -38,13 +38,22 @@ body {
     );
   }
 
+  #grid button:active {
+    background-image:
+    radial-gradient(
+      circle closest-side,
+      rgb(206, 206, 206),
+      rgb(169, 245, 169)
+    );
+  }
+
   #display {
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr;
     width: 216px;
     border-radius: 5px;
-    background-color: black;
+    background-color: rgb(26, 26, 26);
     position: relative;
   }
 
@@ -65,8 +74,8 @@ body {
     width: 650px;
     margin: auto;
     margin-top: 70px;
-    border-radius: 5%;
-    border: 25px solid transparent;
+    border-radius: 5px;
+    border: 10px solid transparent;
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(255,165,0,1) 0%, rgba(255,101,0,1) 0%, rgba(255,255,0,1) 33%, rgba(255,0,255,1) 97%) no-repeat fixed center;
     position: relative;
   }
