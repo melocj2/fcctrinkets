@@ -1,5 +1,7 @@
 import React from 'react';
 import './App.css';
+import drum from './images/drum.png'
+import smiley from './images/smiley.png'
 
 function Display() {
   return (
@@ -7,9 +9,9 @@ function Display() {
       <h2 id="inputstuff">BASS DRUM</h2>
       <div id="slider1">
       <label class="switch">
-  DK
+  <img src={drum} alt="drum" className="logo" height="30" width="30"/>
   <input type="checkbox" />
-  SB
+  <img src={smiley} alt="smiley" className="logo" height="30" width="30" />
       </label>
       </div>
     </div>

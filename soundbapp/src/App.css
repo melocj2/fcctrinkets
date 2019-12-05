@@ -136,5 +136,7 @@ body {
     -webkit-appearance: none;
     position: relative;
     margin: 0 1rem;
+    bottom: 10px;
   }
+
   
