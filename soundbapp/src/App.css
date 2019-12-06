@@ -38,15 +38,6 @@ body {
     );
   }
 
-  #grid button:active {
-    background-image:
-    radial-gradient(
-      circle closest-side,
-      rgb(206, 206, 206),
-      rgb(169, 245, 169)
-    );
-  }
-
   #display {
     display: grid;
     grid-template-rows: 1fr 1fr;
