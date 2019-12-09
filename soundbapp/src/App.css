@@ -5,7 +5,7 @@ body {
 
 .App {
   text-align: center;
-  font-family: 'Share Tech Mono', monospace;
+  font-family: 'Lobster Two', cursive /*'Share Tech Mono', monospace*/;
   background-color: black;
 }
 
@@ -14,9 +14,9 @@ body {
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 1vw;
-  width: 400px;
-  padding: 18px;
+  grid-gap: 0/*1vw*/;
+  width: 300px/*400px*/;
+  padding: 0px/*18px*/;
   border-radius: 5px;
   background-color: rgb(26, 26, 26);
   }
@@ -25,9 +25,10 @@ body {
     border: 1px solid grey;
     height:100px;
     width:100px;
-    margin: auto;
+    margin: 0/*auto*/;
+    padding: 0;/**/
     border-radius: 5px;    
-    font-family: 'Share Tech Mono', monospace;
+    font-family: 'Lobster Two', cursive /*'Share Tech Mono', monospace*/;
     font-size: 40px;
     outline: none;
     background-image:
@@ -44,11 +45,11 @@ body {
     grid-template-columns: 1fr;
     width: 216px;
     border-radius: 5px;
-    background-color: rgb(26, 26, 26);
+    background-color:rgb(26, 26, 26);
     position: relative;
   }
 
-  #display::before {
+  /*#display::before {
     content: "";
     position: absolute;
     left: 0;
@@ -56,18 +57,18 @@ body {
     height: 325px;
     width: 50%;
     border-left: 1px solid grey;
-  }
+  }*/
 
   #drum-machine {
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 2fr 1fr;
-    width: 650px;
+    width: 515px/*650px*/;
     margin: auto;
     margin-top: 70px;
     border-radius: 5px;
     border: 10px solid transparent;
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(255,165,0,1) 0%, rgba(255,101,0,1) 0%, rgba(255,255,0,1) 33%, rgba(255,0,255,1) 97%) no-repeat fixed center;
+    background: rgb(169, 245, 169) /*linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(255,165,0,1) 0%, rgba(255,101,0,1) 0%, rgba(255,255,0,1) 33%, rgba(255,0,255,1) 97%) no-repeat fixed center*/;
     position: relative;
   }
 
@@ -76,7 +77,7 @@ body {
     width: auto;
     padding: 5px;
     margin: auto;
-    font-family: 'Share Tech Mono', monospace;
+    font-family: 'Lobster Two', cursive /*'Share Tech Mono', monospace*/;
     background: #ededed;
     border-radius: 5px;
   }
@@ -94,12 +95,12 @@ body {
 
   .switch input[type="checkbox"]:checked::before {
     left: 10px;
-    background-color: #ededed;
+    background-color: rgb(169, 245, 169) /*#ededed;*/
   }
   
   .switch input[type="checkbox"]:not(:checked)::before {
     right: 10px;
-    background-color: #ededed;
+    background-color: rgb(169, 245, 169);
   }
   
   .switch input[type="checkbox"]::before {
