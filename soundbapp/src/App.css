@@ -133,4 +133,17 @@ body {
     bottom: 10px;
   }
 
-  
+
+  @media screen and (max-width: 600px) {
+    #drum-machine {
+      display: grid;
+      grid-template-rows: 2fr 1fr;
+      grid-template-columns: 1fr;
+      width: 302px;
+      margin-top: 1px;
+      margin-left: 80px;
+    }
+    #display {
+      width: 300px;
+    }
+  }
