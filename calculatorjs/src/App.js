@@ -1,13 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
-function App() {
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      display: []
+    }
+  }
+  render() {
   return (
     <div className="App">
       <h1>BUGAGGBOOOOO!!!</h1>
     </div>
   );
+  }
 }
 
 export default App;
