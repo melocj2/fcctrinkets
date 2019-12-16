@@ -43,14 +43,16 @@ class App extends React.Component {
     this.setState({
     upDisplay: "",
     downDisplay: "0",
-    carryForward: false
+    carryForward: false,
+    hasDec: false
     })
     }
     if (event.target.value === "=") {
     this.setState({
     downDisplay: eval(this.state.upDisplay).toString(),
     upDisplay: this.state.upDisplay.concat("="+(eval(this.state.upDisplay).toString())),
-    carryForward: true
+    carryForward: true,
+    //hasDec: false
     })
     }
     if (!isNaN(this.state.downDisplay) && this.state.carryForward === false) {
@@ -101,7 +103,7 @@ class App extends React.Component {
         if (event.target.value === "." && this.state.hasDec === false) {
           this.setState({
             upDisplay: this.state.upDisplay.concat(event.target.value),
-            downDisplay: this.state.upDisplay.concat(event.target.value),
+            downDisplay: this.state.downDisplay.concat(event.target.value),
             hasDec: true
           })
         } 
@@ -131,13 +133,20 @@ class App extends React.Component {
           hasDec: false
         })
       }
-      if (event.target.value === "-" && this.state.downDisplay.length <= 2) {
+      if (event.target.value === "-" && this.state.downDisplay.length === 1) {
         this.setState({
           upDisplay: this.state.upDisplay.concat(event.target.value),
           downDisplay: this.state.downDisplay.concat(event.target.value),
           hasDec: false,
         })
       }
+      if (event.target.value !== "-" && this.state.downDisplay.length === 2) {
+        this.setState({
+        upDisplay: this.state.upDisplay.replace(/..$/g, event.target.value),
+        downDisplay: event.target.value,
+        hasDec: false
+        })
+        }
       if (event.target.className === "inte" || event.target.value === "0") {
         this.setState({
           upDisplay: this.state.upDisplay.concat(event.target.value),
