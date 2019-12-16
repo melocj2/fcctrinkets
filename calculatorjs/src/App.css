@@ -1,25 +1,33 @@
+html {
+  background-image: url("images/nebula.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 #calc {
-  border: 1px black solid;
-  width: 200px;
+  border: 5px rgb(104, 104, 104) solid;
+  width: 300px;
+  border-radius: 5px;
+  margin-left: 20px;
+  margin-top: 20px;
 }
 
 #display {
-  border: 1px black solid;
-  width: 200px;
-  height: 100px;
+  width: 300px;
+  height: 150px;
   margin: auto;
   position: relative;
+  background: black;
 }
 
 #dis-down {
   position: absolute;
   bottom: 0;
   width: 90%;
-  height: 40px;
+  height: 60px;
   font-size: 30px;
   text-align: right;
-  right: 7px;
-  height: 40px;
+  right: 14px;
+  color: white;
 }
 
 #dis-up {
@@ -27,25 +35,35 @@
   top: 0;
   width: 90%;
   font-size: 15px;
-  height: 20px;
+  height: 30px;
   text-align: right;
-  right: 7px;
+  right: 14px;
+  color: rgb(50, 197, 50);
 }
 
 button {
-  width: 50px;
-  height: 50px;
+  width: 75px;
+  height: 75px;
+  background: rgb(56, 194, 56);
+  border: 1px solid black;
+  color: black;
+}
+
+button:focus { 
+  outline: none; 
 }
 
 #clear {
-  width: 100px;
+  width: 150px;
 }
 
 #zero {
-  width: 100px;
+  width: 150px;
 }
 
 #equals {
-  height: 100px;
+  height: 150px;
   float: right;
 }
+
+

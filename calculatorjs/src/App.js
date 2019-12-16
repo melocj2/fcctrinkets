@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
 
-
 function Keypad(props) {
   return (
     <div id="keypad">
@@ -47,7 +46,7 @@ class App extends React.Component {
     hasDec: false
     })
     }
-    if (event.target.value === "=") {
+    if (event.target.value === "=" && this.state.carryForward === false) {
     this.setState({
     downDisplay: eval(this.state.upDisplay).toString(),
     upDisplay: this.state.upDisplay.concat("="+(eval(this.state.upDisplay).toString())),
@@ -115,6 +114,12 @@ class App extends React.Component {
           upDisplay: this.state.downDisplay.concat(event.target.value),
           downDisplay: event.target.value,
           carryForward: false
+        })
+      }
+      else if (event.target.value === "=") {
+        this.setState({
+          upDisplay: this.state.downDisplay,
+          downDisplay: this.state.downDisplay
         })
       }
       else {
