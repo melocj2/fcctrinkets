@@ -49,8 +49,12 @@ button {
   color: black;
 }
 
+button:active {
+background:  rgb(29, 102, 29);
+}
+
 button:focus { 
-  outline: none; 
+  outline: none;
 }
 
 #clear {

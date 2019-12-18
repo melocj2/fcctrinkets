@@ -37,6 +37,46 @@ class App extends React.Component {
   this.handleClick = this.handleClick.bind(this)
   }
 
+  componentDidMount = () => {
+    document
+    .addEventListener("keydown", event => 
+      { 
+        if (event.keyCode === 111) 
+    {document.getElementById("divide").click();}
+        if (event.keyCode === 106) 
+    {document.getElementById("multiply").click();}
+        if (event.keyCode === 109) 
+    {document.getElementById("subtract").click();}
+        if (event.keyCode === 103) 
+    {document.getElementById("seven").click();}
+        if (event.keyCode === 104) 
+    {document.getElementById("eight").click();}
+        if (event.keyCode === 105) 
+    {document.getElementById("nine").click();}
+        if (event.keyCode === 107) 
+    {document.getElementById("addition").click();}
+        if (event.keyCode === 110) 
+    {document.getElementById("decimal").click();}
+        if (event.keyCode === 100) 
+    {document.getElementById("four").click();}
+        if (event.keyCode === 101) 
+    {document.getElementById("five").click();}
+        if (event.keyCode === 102) 
+    {document.getElementById("six").click();}
+        if (event.keyCode === 97) 
+    {document.getElementById("one").click();}
+        if (event.keyCode === 98) 
+    {document.getElementById("two").click();}
+        if (event.keyCode === 99) 
+    {document.getElementById("three").click();}
+        if (event.keyCode === 96) 
+    {document.getElementById("zero").click();}
+        if (event.keyCode === 13) 
+    {document.getElementById("equals").click();}
+      }
+    )
+  }
+
   handleClick = (event) => 
   { if (event.target.value === "clear") {
     this.setState({
@@ -51,8 +91,15 @@ class App extends React.Component {
     downDisplay: eval(this.state.upDisplay).toString(),
     upDisplay: this.state.upDisplay.concat("="+(eval(this.state.upDisplay).toString())),
     carryForward: true,
-    //hasDec: false
+    hasDec: false
     })
+    }
+    if ((event.target.value === "." && this.state.hasDec === false) || (event.target.value === "." && isNaN(this.state.downDisplay))) {
+      this.setState({
+          upDisplay: this.state.upDisplay.concat("0."),
+          downDisplay: this.state.downDisplay.concat("."),
+          hasDec: true
+          })
     }
     if (!isNaN(this.state.downDisplay) && this.state.carryForward === false) {
       if (this.state.downDisplay === "0") {
@@ -142,7 +189,7 @@ class App extends React.Component {
         this.setState({
           upDisplay: this.state.upDisplay.concat(event.target.value),
           downDisplay: this.state.downDisplay.concat(event.target.value),
-          hasDec: false,
+          hasDec: false
         })
       }
       if (event.target.value !== "-" && this.state.downDisplay.length === 2) {
