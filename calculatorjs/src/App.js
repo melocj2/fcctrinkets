@@ -1,26 +1,103 @@
 import React from 'react';
 import './App.css';
 
+
 function Keypad(props) {
+  let btnData = [
+
+    {id: "clear",
+    value: "clear",
+    inner: "AC",
+    classR: "#"},
+  
+    {id: "divide",
+    value: "/",
+    inner: "/",
+    classR: "operator"},
+  
+    {id: "multiply",
+    value: "*",
+    inner: "X",
+    classR: "operator"},
+  
+    {id: "seven",
+    value: "7",
+    inner: "7",
+    classR: "inte"},
+  
+    {id: "eight",
+    value: "8",
+    inner: "8",
+    classR: "inte"},
+  
+    {id: "nine",
+    value: "9",
+    inner: "9",
+    classR: "inte"},
+  
+    {id: "subtract",
+    value: "-",
+    inner: "-",
+    classR: "inte"},
+  
+    {id: "four",
+    value: "4",
+    inner: "4",
+    classR: "inte"},
+  
+    {id: "five",
+    value: "5",
+    inner: "5",
+    classR: "inte"},
+  
+    {id: "six",
+    value: "6",
+    inner: "6",
+    classR: "inte"},
+  
+    {id: "addition",
+    value: "+",
+    inner: "+",
+    classR: "operator"},
+  
+    {id: "one",
+    value: "1",
+    inner: "1",
+    classR: "inte"},
+  
+    {id: "two",
+    value: "2",
+    inner: "2",
+    classR: "inte"},
+  
+    {id: "three",
+    value: "3",
+    inner: "3",
+    classR: "inte"},
+  
+    {id: "equals",
+    value: "=",
+    inner: "=",
+    classR: "#"},
+  
+    {id: "zero",
+    value: "0",
+    inner: "0",
+    classR: "#"},
+  
+    {id: "decimal",
+    value: ".",
+    inner: ".",
+    classR: "#"}] 
+  
+  let contents = btnData.map(item => {
+    return <button id={item.id} onClick={props.handleClick} value={item.value} className={item.classR}>{item.inner}</button>
+    })
   return (
     <div id="keypad">
-      <button id="clear" onClick={props.handleClick} value="clear">AC</button>
-      <button id="divide" onClick={props.handleClick} value="/" className="operator">/</button>
-      <button id="multiply" onClick={props.handleClick} value="*" className="operator">X</button>
-      <button id="seven" onClick={props.handleClick} value="7" className="inte">7</button>
-      <button id="eight" onClick={props.handleClick} value="8" className="inte">8</button>
-      <button id="nine" onClick={props.handleClick} value="9" className="inte">9</button>
-      <button id="subtract" onClick={props.handleClick} value="-" className="operator">-</button>
-      <button id="four" onClick={props.handleClick} value="4" className="inte">4</button>
-      <button id="five" onClick={props.handleClick} value="5" className="inte">5</button>
-      <button id="six" onClick={props.handleClick} value="6" className="inte">6</button>
-      <button id="addition" onClick={props.handleClick} value="+" className="operator">+</button>
-      <button id="one" onClick={props.handleClick} value="1" className="inte">1</button>
-      <button id="two" onClick={props.handleClick} value="2" className="inte">2</button>
-      <button id="three" onClick={props.handleClick} value="3" className="inte">3</button>
-      <button id="equals" onClick={props.handleClick} value="=">=</button>
-      <button id="zero" onClick={props.handleClick} value="0">0</button>
-      <button id="decimal" onClick={props.handleClick} value=".">.</button>
+
+      {contents}
+      
     </div>
   )
 }
@@ -40,7 +117,7 @@ class App extends React.Component {
   componentDidMount = () => {
     document
     .addEventListener("keydown", event => 
-      { 
+      {
         if (event.keyCode === 111) 
     {document.getElementById("divide").click();}
         if (event.keyCode === 106) 
