@@ -3,94 +3,8 @@ import './App.css';
 
 
 function Keypad(props) {
-  let btnData = [
-
-    {id: "clear",
-    value: "clear",
-    inner: "AC",
-    classR: "#"},
-  
-    {id: "divide",
-    value: "/",
-    inner: "/",
-    classR: "operator"},
-  
-    {id: "multiply",
-    value: "*",
-    inner: "X",
-    classR: "operator"},
-  
-    {id: "seven",
-    value: "7",
-    inner: "7",
-    classR: "inte"},
-  
-    {id: "eight",
-    value: "8",
-    inner: "8",
-    classR: "inte"},
-  
-    {id: "nine",
-    value: "9",
-    inner: "9",
-    classR: "inte"},
-  
-    {id: "subtract",
-    value: "-",
-    inner: "-",
-    classR: "inte"},
-  
-    {id: "four",
-    value: "4",
-    inner: "4",
-    classR: "inte"},
-  
-    {id: "five",
-    value: "5",
-    inner: "5",
-    classR: "inte"},
-  
-    {id: "six",
-    value: "6",
-    inner: "6",
-    classR: "inte"},
-  
-    {id: "addition",
-    value: "+",
-    inner: "+",
-    classR: "operator"},
-  
-    {id: "one",
-    value: "1",
-    inner: "1",
-    classR: "inte"},
-  
-    {id: "two",
-    value: "2",
-    inner: "2",
-    classR: "inte"},
-  
-    {id: "three",
-    value: "3",
-    inner: "3",
-    classR: "inte"},
-  
-    {id: "equals",
-    value: "=",
-    inner: "=",
-    classR: "#"},
-  
-    {id: "zero",
-    value: "0",
-    inner: "0",
-    classR: "#"},
-  
-    {id: "decimal",
-    value: ".",
-    inner: ".",
-    classR: "#"}] 
-  
-  let contents = btnData.map(item => {
+    
+  let contents = props.btnData.map(item => {
     return <button id={item.id} onClick={props.handleClick} value={item.value} className={item.classR}>{item.inner}</button>
     })
   return (
@@ -118,41 +32,118 @@ class App extends React.Component {
     document
     .addEventListener("keydown", event => 
       {
-        if (event.keyCode === 111) 
-    {document.getElementById("divide").click();}
-        if (event.keyCode === 106) 
-    {document.getElementById("multiply").click();}
-        if (event.keyCode === 109) 
-    {document.getElementById("subtract").click();}
-        if (event.keyCode === 103) 
-    {document.getElementById("seven").click();}
-        if (event.keyCode === 104) 
-    {document.getElementById("eight").click();}
-        if (event.keyCode === 105) 
-    {document.getElementById("nine").click();}
-        if (event.keyCode === 107) 
-    {document.getElementById("addition").click();}
-        if (event.keyCode === 110) 
-    {document.getElementById("decimal").click();}
-        if (event.keyCode === 100) 
-    {document.getElementById("four").click();}
-        if (event.keyCode === 101) 
-    {document.getElementById("five").click();}
-        if (event.keyCode === 102) 
-    {document.getElementById("six").click();}
-        if (event.keyCode === 97) 
-    {document.getElementById("one").click();}
-        if (event.keyCode === 98) 
-    {document.getElementById("two").click();}
-        if (event.keyCode === 99) 
-    {document.getElementById("three").click();}
-        if (event.keyCode === 96) 
-    {document.getElementById("zero").click();}
-        if (event.keyCode === 13) 
-    {document.getElementById("equals").click();}
+        this.btnData.map(item => {
+          if (event.keyCode === item.key) {
+            document.getElementById(item.id).click();
+          }
+        })
       }
     )
   }
+
+  btnData = [
+
+    {id: "clear",
+    value: "clear",
+    inner: "AC",
+    classR: "#",
+    key: 1000},
+  
+    {id: "divide",
+    value: "/",
+    inner: "/",
+    classR: "operator",
+    key: 111},
+  
+    {id: "multiply",
+    value: "*",
+    inner: "X",
+    classR: "operator",
+    key: 106},
+  
+    {id: "seven",
+    value: "7",
+    inner: "7",
+    classR: "inte",
+    key: 103},
+  
+    {id: "eight",
+    value: "8",
+    inner: "8",
+    classR: "inte",
+    key: 104},
+  
+    {id: "nine",
+    value: "9",
+    inner: "9",
+    classR: "inte",
+    key: 105},
+  
+    {id: "subtract",
+    value: "-",
+    inner: "-",
+    classR: "inte",
+    key: 109},
+  
+    {id: "four",
+    value: "4",
+    inner: "4",
+    classR: "inte",
+    key: 100},
+  
+    {id: "five",
+    value: "5",
+    inner: "5",
+    classR: "inte",
+    key: 101},
+  
+    {id: "six",
+    value: "6",
+    inner: "6",
+    classR: "inte",
+    key: 102},
+  
+    {id: "addition",
+    value: "+",
+    inner: "+",
+    classR: "operator",
+    key: 107},
+  
+    {id: "one",
+    value: "1",
+    inner: "1",
+    classR: "inte",
+    key: 97},
+  
+    {id: "two",
+    value: "2",
+    inner: "2",
+    classR: "inte",
+    key: 98},
+  
+    {id: "three",
+    value: "3",
+    inner: "3",
+    classR: "inte",
+    key: 99},
+  
+    {id: "equals",
+    value: "=",
+    inner: "=",
+    classR: "#",
+    key: 13},
+  
+    {id: "zero",
+    value: "0",
+    inner: "0",
+    classR: "#",
+    key: 96},
+  
+    {id: "decimal",
+    value: ".",
+    inner: ".",
+    classR: "#",
+    key: 110}] 
 
   handleClick = (event) => 
   { if (event.target.value === "clear") {
@@ -292,7 +283,7 @@ class App extends React.Component {
         <div id="dis-up">{this.state.upDisplay}</div>
         <div id="dis-down">{this.state.downDisplay}</div>
       </div>
-      <Keypad handleClick={this.handleClick}/>
+      <Keypad btnData={this.btnData} handleClick={this.handleClick}/>
     </div>
   );
   }
