@@ -29,8 +29,7 @@ class App extends React.Component {
   }
 
   componentDidMount = () => {
-    document
-    .addEventListener("keydown", event => 
+    document.addEventListener("keydown", event => 
       {
         this.btnData.map(item => {
           if (event.keyCode === item.key) {
@@ -47,7 +46,7 @@ class App extends React.Component {
     value: "clear",
     inner: "AC",
     classR: "#",
-    key: 1000},
+    key: 32},
   
     {id: "divide",
     value: "/",
@@ -146,15 +145,30 @@ class App extends React.Component {
     key: 110}] 
 
   handleClick = (event) => 
-  { if (event.target.value === "clear") {
-    this.setState({
-    upDisplay: "",
-    downDisplay: "0",
-    carryForward: false,
-    hasDec: false
-    })
+  
+  {   if (event.target.value === "clear") {
+      this.setState({
+      upDisplay: "",
+      downDisplay: "0",
+      carryForward: false,
+      hasDec: false
+      })
+      }
+    if (event.target.value === "=") {
+    if (!(/./g).test(this.state.upDisplay)) {
+      this.setState({
+        downDisplay: "0",
+        upDisplay: ""
+      })
+      return;
     }
-    if (event.target.value === "=" && this.state.carryForward === false) {
+    if ((/=/g).test(this.state.upDisplay)) {
+      this.setState({
+        downDisplay: this.state.downDisplay,
+        upDisplay: this.state.upDisplay
+      })
+    }
+    else {
     this.setState({
     downDisplay: eval(this.state.upDisplay).toString(),
     upDisplay: this.state.upDisplay.concat("="+(eval(this.state.upDisplay).toString())),
@@ -162,6 +176,7 @@ class App extends React.Component {
     hasDec: false
     })
     }
+  }
     if ((event.target.value === "." && this.state.hasDec === false) || (event.target.value === "." && isNaN(this.state.downDisplay))) {
       this.setState({
           upDisplay: this.state.upDisplay.concat("0."),
